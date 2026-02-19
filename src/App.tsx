@@ -145,7 +145,12 @@ function App() {
         totalRecords={totalRecords}
         lazy
         first={page * 12}
-        onPage={(e) => setPage(e.page)}
+        onPage={(e) => {
+          if (e.page !== undefined) {
+            setPage(e.page);
+          }
+        }}
+
         selection={selectedRows}
         onSelectionChange={handleSelectionChange}
         dataKey="id"
