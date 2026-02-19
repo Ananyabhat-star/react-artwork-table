@@ -154,6 +154,8 @@ function App() {
         selection={selectedRows}
         onSelectionChange={handleSelectionChange}
         dataKey="id"
+        selectionMode="multiple"
+
       >
         <Column selectionMode="multiple" headerStyle={{ width: "3rem" }} />
         <Column field="title" header="Title" />
